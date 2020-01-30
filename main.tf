@@ -31,12 +31,7 @@ resource "google_container_cluster" "afrl-janus-cluster" {
   addons_config {
     httpLoadBalancing = {}
     horizontalPodAutoscaling = {}
-    kubernetesDashboard = {
-      "disabled" = true
-    }
-    istioConfig = {
-      "disabled" = true
-    }
+
   }
   node_config {
     oauth_scopes = [
