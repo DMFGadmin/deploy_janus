@@ -29,11 +29,11 @@ resource "google_container_cluster" "afrl-janus-cluster" {
   network = "projects/${var.afrl-shared-host-project}/global/networks/${var.afrl-shared-host-network}"
 
   addons_config {
-    httpLoadBalancing = {},
-    horizontalPodAutoscaling = {},
+    httpLoadBalancing = {}
+    horizontalPodAutoscaling = {}
     kubernetesDashboard = {
       "disabled" = true
-    },
+    }
     istioConfig = {
       "disabled" = true
     }
