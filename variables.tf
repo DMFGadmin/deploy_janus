@@ -1,0 +1,23 @@
+variable "cluster_name" {
+  type = string
+}
+
+variable "zone" {
+  type = string
+}
+
+variable "display_name" {
+
+}
+
+variable "project_id" {
+
+}
+
+variable "afrl-shared-host-project" {
+  description = "name of the project hosting the shared vpc network"
+}
+
+variable "afrl-shared-host-network" {
+  description = "name of the network in the shared vpc"
+}
