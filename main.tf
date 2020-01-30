@@ -28,11 +28,6 @@ resource "google_container_cluster" "afrl-janus-cluster" {
   }
   network = "projects/${var.afrl-shared-host-project}/global/networks/${var.afrl-shared-host-network}"
 
-  addons_config {
-    httpLoadBalancing = {}
-    horizontalPodAutoscaling = {}
-
-  }
   node_config {
     oauth_scopes = [
       "https://www.googleapis.com/auth/devstorage.read_only",
