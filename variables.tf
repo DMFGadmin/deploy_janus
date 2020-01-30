@@ -21,3 +21,7 @@ variable "afrl-shared-host-project" {
 variable "afrl-shared-host-network" {
   description = "name of the network in the shared vpc"
 }
+
+variable "afrl-shared-host-subnet" {
+  description = "name of the subnetwork in the shared vpc"
+}

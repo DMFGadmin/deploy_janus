@@ -26,7 +26,14 @@ resource "google_container_cluster" "afrl-janus-cluster" {
       issue_client_certificate = false
     }
   }
+  logging_service = "logging.googleapis.com"
+  monitoring_service = "monitoring.googleapis.com"
   network = "projects/${var.afrl-shared-host-project}/global/networks/${var.afrl-shared-host-network}"
+  subnetwork = "projects/${var.afrl-shared-host-project}/regions/us-central1/subnetworks/${var.afrl-shared-host-subnet}"
+
+  node_pool {
+
+  }
 
   node_config {
     oauth_scopes = [
@@ -48,7 +55,7 @@ resource "google_container_cluster" "afrl-janus-cluster" {
       foo = "bar"
     }
 
-    tags = ["foo", "bar"]
+    tags = ["afrl", "wbi"]
   }
 
   timeouts {
