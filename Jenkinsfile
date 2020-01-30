@@ -2,10 +2,10 @@ pipeline {
     agent any
 
    stages {
-      stage('Run gcloud version') {
+      stage('Janus KickOff') {
 
          steps {
-            sh 'gcloud --version'
+            sh 'gcloud config set compute/zone us-central1-f'
          }
       }
    }
