@@ -70,7 +70,6 @@ resource "google_container_cluster" "afrl-janus-cluster" {
 
   }
   ip_allocation_policy {
-    use_ip_aliases = true
     cluster_secondary_range_name = var.afrl-pods-subnet
     services_secondary_range_name = var.afrl-services-subnet
   }
