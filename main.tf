@@ -62,7 +62,7 @@ resource "google_container_cluster" "afrl-janus-cluster" {
         disable-legacy-endpoints = "true"
       }
       tags = ["afrl", "wbi"]
-      labels {
+      labels = {
         env = "dev"
       }
 
