@@ -1,16 +1,23 @@
 pipeline {
-   agent any
-
-stages {
-    stage('Run gcloud') {
-
-        steps {
-            withEnv(['GCLOUD_PATH=/var/jenkins_home/google-cloud-sdk/bin']) {
-                sh '$GCLOUD_PATH/gcloud --version'
+    agent any
+    options {
+        skipStagesAfterUnstable()
+    }
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building'
             }
-
-
-         }
-      }
-   }
+        }
+        stage('Test') {
+            steps {
+                echo 'Testing'
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying'
+            }
+        }
+    }
 }
