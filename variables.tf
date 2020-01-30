@@ -25,3 +25,11 @@ variable "afrl-shared-host-network" {
 variable "afrl-shared-host-subnet" {
   description = "name of the subnetwork in the shared vpc"
 }
+
+variable "afrl-pods-subnet" {
+  description = "name of the subnetwork to use for GKE pods"
+}
+
+variable "afrl-services-subnet" {
+  description = "name of the subnetwork to use for GKE services"
+}
