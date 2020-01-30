@@ -4,9 +4,9 @@ pipeline {
         skipStagesAfterUnstable()
     }
     stages {
-        stage('Build') {
+        stage('Run gcloud') {
             steps {
-                echo 'Building'
+                gcloud --version
             }
         }
         stage('Test') {
